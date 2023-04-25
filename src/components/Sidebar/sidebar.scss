@@ -1,0 +1,152 @@
+@import '../../utils/ratios';
+@import '../../utils//colors.scss';
+
+.sidebar {
+  background-color: $bgBlue;
+  width: $widthRadio*260px;
+  padding-bottom: $widthRadio*39px;
+  height: 100vh;
+}
+
+.slideIn {
+  animation: slideIn 0.3s;
+}
+
+.slideOut {
+  animation: slideOut 0.3s;
+}
+
+@keyframes slideIn {
+  from {
+    width: $widthRadio*240px;
+  }
+
+  to {
+    width: 0
+  }
+}
+
+@keyframes slideOut {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: $widthRadio*260px;
+  }
+
+}
+
+.collapse {
+  position: absolute;
+  left: -20px;
+  top: 24px;
+}
+
+.sidebarHeader {
+  display: flex;
+  padding-top: 24px;
+
+  img {
+    margin-left: $widthRadio*30px;
+    margin-right: $widthRadio*14px;
+  }
+
+  h1 {
+    color: white;
+    font-size: $widthRadio*24px;
+    line-height: 0;
+  }
+
+  .collapse {
+    position: absolute;
+    left: $widthRadio*260px - 20px;
+    top: 24px;
+    margin: 0;
+  }
+}
+
+.menu {
+
+  margin-top: 40px;
+
+  h2 {
+    color: $lightBlue;
+    margin-left: $widthRadio*28px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .item {
+    height: 46px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: $widthRadio*8px;
+    padding: 16px $widthRadio*14px;
+    margin: 0 $widthRadio*14px;
+    margin-right: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    span {
+      color: white;
+      font-size: 18px;
+    }
+  }
+}
+
+.sidebarFooter {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 31px;
+  margin-top: 170px;
+  border-radius: 8px;
+  background-color: $bgAltBlue;
+  width: $widthRadio*204px;
+  height: 125px;
+
+  img {
+    position: absolute;
+    top: -($widthRadio*20px);
+    width: $widthRadio*40px;
+    padding: 4px;
+    background-color: $bgGrey;
+    border-radius: 50%;
+  }
+
+  span {
+    color: white;
+    margin-top: 32px;
+    margin-bottom: 19px;
+  }
+
+  button {
+    background-color: $btnBlue;
+    color: white;
+    padding: 0;
+    border: 0;
+    border-radius: 6px;
+    width: $widthRadio*166px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+}
+
+.notifications {
+  color: white;
+  font-size: 14px;
+  line-height: 21px;
+  height: 24px;
+  width: 24px;
+  float: right;
+  background-color: $notificationsRed;
+  text-align: center;
+  position: absolute;
+  right: 25px;
+  border-radius: 4px;
+}
