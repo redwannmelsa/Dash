@@ -1,0 +1,116 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 25px 36px;
+  max-height: 89px;
+  border-bottom: 1px solid #DADADA;
+  background-color: #F8F9FF;
+}
+
+.user {
+  display: flex;
+  gap: 16px;
+  width: 260px;
+  border-right: 1px solid #DADADA;
+  padding: 0 25px;
+
+  .userPfp {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    object-fit: cover;
+  }
+
+  .userInfo {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+
+    .userName {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .userEmail {
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 25px;
+
+  input {
+    border: none;
+    width: 300px;
+    background-color: inherit;
+    border: none;
+
+    :focus {
+      outline: none;
+    }
+
+
+    :focus-visible {
+      outline: none !important;
+    }
+  }
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  color: #30D988;
+  gap: 6px;
+  position: relative;
+  left: -105px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  .userStatus {
+    height: 2px;
+  }
+
+  .dot {
+    height: 7px;
+    width: 7px;
+    background-color: #30D988;
+    border-radius: 50%;
+  }
+
+  .statusPfp {
+    position: absolute;
+    top: -16px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+  }
+
+  @for $i from 0 to 4 {
+    .pfp#{$i} {
+      left: $i*15+70px;
+      z-index: 10-$i
+    }
+  }
+}
+
+.nav-notifications {
+
+  border-left: 1px solid #DADADA;
+  height: 39px;
+
+  img {
+    position: relative;
+    padding-left: 20px;
+    top: -6px;
+  }
+}
